@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-center flex-column">
+            <h2>RANDOM NUMBER GENERATOR</h2>
+            <form>
+                <h3>1 - 10</h3>
+                <input type="text" id="textArea" readonly="true" value="">
+                <input type="button" class="btn" placeholder="Submit" value="GENERATE" onclick="generate2()">
+            </form>
+            <form>
+                <h3>1 - 100</h3>
+                <input type="text" id="textArea2" readonly="true" value="">
+                <input type="button" class="btn" placeholder="Submit" value="GENERATE" onclick="generate()">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        function generate() {
+            const textArea = document.getElementById('textArea2');
+            var randomNumber =
+                Math.floor(Math.random() * 101);
+
+            textArea.value = randomNumber;
+
+        }
+
+        function generate2() {
+            const textArea = document.getElementById('textArea');
+            var randomNumber =
+                Math.floor(Math.random() * 11);
+
+            textArea.value = randomNumber;
+        }
+    </script>
+</body>
+
+</html>
